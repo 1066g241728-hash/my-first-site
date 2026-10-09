@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>堀池悠人のサイト</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let jikan = new Date();
+        let hour = jikan.getHours();
+        let minute = jikan.getMinutes();
+        let second = jikan.getSeconds();
+        
+        // 元のコードの仕様（2018年からの経過年数？）を維持しています
+        let year = jikan.getFullYear() - 2018; 
+        let month = jikan.getMonth() + 1; // jiakn から jikan に修正
+        let date = jikan.getDate();
+        let weekday = jikan.getDay(); // weekday の定義を追加
+
+        window.alert("今日は" + year + "年" + month + "月" + date + "日です");
+        
+        // 木曜日は 4 です (0:日, 1:月, 2:火, 3:水, 4:木, 5:金, 6:土)
+        if(weekday == 4){
+            window.alert("今日は木曜日です"); // arert から alert に修正
+        } else {
+            window.alert("今日は木曜日ではありません");
+        }
+        
+        window.alert("ようこそ！現在は" + hour + "時" + minute + "分" + second + "秒です");
+    </script>
+</head>
+<body>
+    <div id="header">
+      <h1>堀池のサイト</h1>
+    </div>
+    <div id="main">
+        <h2>見出し１</h2>
+        <p>ここに文章</p>
+        <h2>見出し１</h2>
+        <p>ここに文章</p>
+    </div>
+    <div id="footer">
+        <p>copyright (c) 2026 yuto horiike.All right reserved.</p>
+    </div>
+</body>
+</html>
